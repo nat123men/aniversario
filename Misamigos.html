@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cuenta Regresiva</title>
+  <link rel="stylesheet" href="estilos/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+.timeline-nav {
+      background: linear-gradient(to right, #802501, #b96506);
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px dashed #f3b983;
+    }
+    .timeline-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 2em;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+    .timeline-nav a:hover {
+      color: #d63384;
+      transform: scale(1.2) rotate(-3deg);
+    }
+
+    #countdown {
+      font-size: 2em;
+      font-weight: bold;
+      color: #d63384;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+<nav class="timeline-nav" data-aos="fade-down">
+  <a href="inicio.html" title="Inicio 🏠">🏠</a>
+  <a href="biografia.html" title="Nuestra historia 💖">📜</a>
+  <a href="Metas.html" title="Fotos juntos 🕸️">🕸️</a>
+  <a href="MiFamilia.html" title="Nuestra música 🎮">🎧</a>
+  <a href="Misamigos.html" title="Cuenta regresiva 🕹️">⏳</a>
+  <a href="quiz.html" title="Quiz de nuestro amor 🧠">🧠</a>
+</nav>
+<center>
+  <section class="box">
+    <h1><strong>Cuenta Regresiva 🎉</strong></h1>
+    <p>Para nuestro próximo aniversario 💑</p>
+    <div id="countdown"></div>
+    <br />
+    <a href="inicio.html">⬅ Volver al inicio</a>
+  </section>
+</center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+
+  const targetDate = new Date("2026-05-01T00:00:00").getTime();
+  const countdown = document.getElementById("countdown");
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    countdown.innerHTML = `${days} días, ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
+</body>
+</html>

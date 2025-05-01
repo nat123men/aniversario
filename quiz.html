@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Qué tanto me conoces?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .timeline-nav {
+      background: linear-gradient(to right, #802501, #b96506);
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px dashed #f3b983;
+    }
+    .timeline-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 2em;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+    .timeline-nav a:hover {
+      color: #d63384;
+      transform: scale(1.2) rotate(-3deg);
+    }
+    #countdown {
+      font-size: 2em;
+      font-weight: bold;
+      color: #d63384;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+    .question {
+      margin: 100px 0;
+    }
+    .question p {
+      font-weight: bold;
+      font-size: 2.6em;
+    }
+    .question label {
+  font-size: 2.6em;
+}
+
+    button {
+      background-color: #d6550a;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 1.3em;
+    }
+    .result {
+      font-size: 1.8em;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+  
+</head>
+<!-- Sustituye el <body> actual desde <nav> hasta el final por esto: -->
+
+  <body>
+    <nav class="timeline-nav" data-aos="fade-down">
+      <a href="inicio.html" title="Inicio 🏠">🏠</a>
+      <a href="biografia.html" title="Nuestra historia 💖">📜</a>
+      <a href="Metas.html" title="Fotos juntos 🕸️">🕸️</a>
+      <a href="MiFamilia.html" title="Nuestra música 🎮">🎧</a>
+      <a href="Misamigos.html" title="Cuenta regresiva 🕹️">⏳</a>
+      <a href="quiz.html" title="Quiz de nuestro amor 🧠">🧠</a>
+    </nav>
+  
+    <center>
+      <section class="box">
+        <h1 data-aos="zoom-in">💘 ¿Qué tanto me conoces?</h1>
+        <form id="quizForm" class="timeline">
+          <div class="event" data-aos="fade-up">
+            <p>1. ¿Cuál es mi comida favorita?</p><br><br>
+            <label><input type="radio" name="q1" value="a"> Pizza</label><br>
+            <label><input type="radio" name="q1" value="b"> Sushi</label><br>
+            <label><input type="radio" name="q1" value="c"> Pasta</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="100">
+            <p>2. ¿En qué mes empezamos a salir?</p><br><br>
+            <label><input type="radio" name="q2" value="a"> Febrero</label><br>
+            <label><input type="radio" name="q2" value="b"> Marzo</label><br>
+            <label><input type="radio" name="q2" value="c"> Abril</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="200">
+            <p>3. ¿Qué canción me recuerda a ti?</p><br><br>
+            <label><input type="radio" name="q3" value="a"> Somebody That I Used to Know - Gotye</label><br>
+            <label><input type="radio" name="q3" value="b"> Chorrito Pa Las Animas - Feid</label><br>
+            <label><input type="radio" name="q3" value="c"> Mi Lugar Seguro - Jay Wheeler</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="300">
+            <p>4. ¿Qué personaje de Marvel me gustaría ser?</p><br><br>
+            <label><input type="radio" name="q4" value="a"> Spider-Woman</label><br>
+            <label><input type="radio" name="q4" value="b"> La Bruja Escarlata</label><br>
+            <label><input type="radio" name="q4" value="c"> She-Hulk</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="400">
+            <p>5. ¿Dónde fue nuestro primer beso?</p><br><br>
+            <label><input type="radio" name="q5" value="a"> En el colegio</label><br>
+            <label><input type="radio" name="q5" value="b"> En la playa</label><br>
+            <label><input type="radio" name="q5" value="c"> En tu casa</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="500">
+            <p>6. ¿Cuál es mi pasatiempo favorito?</p><br><br>
+            <label><input type="radio" name="q6" value="a"> Dibujar</label><br>
+            <label><input type="radio" name="q6" value="b"> Maquillarme</label><br>
+            <label><input type="radio" name="q6" value="c"> Ver películas</label>
+          </div><br><br>
+          <div class="event" data-aos="fade-up" data-aos-delay="600">
+            <p>7. ¿Quién es mi artista favorito?</p><br><br>
+            <label><input type="radio" name="q7" value="a"> Bad Bunny</label><br>
+            <label><input type="radio" name="q7" value="b"> Lady Gaga</label><br>
+            <label><input type="radio" name="q7" value="c"> Karol G</label><br><br>
+          </div>
+  
+          <br><br>
+          <button type="button" onclick="calcularResultado()">Enviar Respuestas</button>
+          <div class="result" id="resultado"></div>
+        </form>
+  
+        <br>
+        <a href="inicio.html">⬅ Volver al inicio</a>
+      </section>
+    </center>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+  
+      function calcularResultado() {
+        const respuestas = {
+          q1: "c", q2: "b", q3: "a", q4: "b", q5: "a", q6: "b", q7: "a"
+        };
+        let score = 0;
+        for (let key in respuestas) {
+          const seleccionada = document.querySelector('input[name="'+key+'"]:checked');
+          if (seleccionada && seleccionada.value === respuestas[key]) {
+            score++;
+          }
+        }
+        const resultado = document.getElementById("resultado");
+        resultado.style.display = "block";
+        if (score === 7) {
+          resultado.innerHTML = `🥇 ¡Perfecto! Eres el amo de mi corazón. Puntaje: ${score}/7 💖`;
+        } else if (score >= 4) {
+          resultado.innerHTML = `😊 ¡Muy bien! Me conoces bastante. Puntaje: ${score}/7 💕`;
+        } else {
+          resultado.innerHTML = `😅 Uhh... tenemos que hablar... Puntaje: ${score}/7 😘`;
+        }
+      }
+    </script>
+  </body>
+  
+</html>
+

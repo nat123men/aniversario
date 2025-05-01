@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de nuestro sitio del amor</title>
+   
+   <link rel="stylesheet" href="estilos/index.css" type="text/css">
+   <style>
+   
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: float 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50px, -100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body> 
+    <script>
+        function createHeart() {
+          const heart = document.createElement('div');
+          heart.className = 'heart';
+          heart.style.left = Math.random() * 100 + 'vw';
+          heart.style.top = Math.random() * 100 + 'vh';
+          heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+          heart.style.transform = `rotate(45deg) scale(${Math.random() + 0.5})`;
+      
+          document.body.appendChild(heart);
+      
+          setTimeout(() => {
+            heart.remove();
+          }, 5000);
+        }
+      
+        setInterval(createHeart, 300); // Puedes reducir este número para más corazones
+      </script>
+<center>
+<section class="box">
+<img src="estilos/img/US.jpg" width="180" class="box-img">
+<h1><strong>Nat & Angel</strong></h1>
+<h2>Nuestro sitio web</h2>
+<p>Hola mi amor primero que todo feliz aniversario, bienvenido a nuestro sitio web espero que disfrutes mucho esto,
+    lo hice con mucho mucho amor y puede que no sea perfecto pero mi intencion es que puedas ver cuento te amo, disfruta mi vida.
+</p><br>
+<ul class="menu">
+    <li><a href="biografia.html">Nuestra Historia</a></li>
+    <li><a href="Metas.html">Fotos</a></li>
+    <li><a href="MiFamilia.html">Musica</a></li>
+    <li><a href="Misamigos.html">Cuenta Regresiva</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+</ul>
+
+</section>
+</center> 
+</body>
+</html>
