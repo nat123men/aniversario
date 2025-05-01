@@ -1,0 +1,11 @@
+body {
+    background-image: url(MiBlog/imagenes/Sui.jpg) ;
+    background-repeat: no-repeat;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: crimson;
+    text-align: right;
+    text-shadow: 10px;
+    text-decoration: bisque;
+}

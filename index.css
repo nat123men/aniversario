@@ -1,0 +1,94 @@
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+   background: url('img/US.jpg') no-repeat;
+	background-size: cover;
+   background-position: 0px;
+   background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+    width: 600px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: o auto;
+    margin-top: 4%;
+    padding: 20px;
+    color: rgb(126, 40, 1);
+    text-align: center;
+    border-radius: 15px;
+}
+.box-img{
+    border-radius: 50%;
+}
+
+.box h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    margin: 30px 0 20px;
+
+}
+.box h2{
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.box p{
+    text-align: justify;
+    font-size: 18px;
+}
+.menu{
+    list-style: none;
+    font-size: 24px;
+    padding: 0;
+    background: #6d1b06;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: rgb(247, 188, 110);
+    padding: 20px;
+    display: block;
+}
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #491607;
+}
+
+#modo-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff0f5;
+    color: #d63384;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ffd6e7;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  body.dark-mode {
+    background-color: #1a1a2e;
+    color: #fff;
+  }
+  body.dark-mode .box,
+  body.dark-mode .photo {
+    background-color: #282c34;
+    color: #fff;
+  }
+  
